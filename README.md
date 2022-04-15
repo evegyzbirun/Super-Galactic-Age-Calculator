@@ -2,7 +2,7 @@
 
 #### by _**(Evgeny Zbirun)**_
 
-#### The application helps user to get how mamy years left to live based on a planet and user's lifestyle with other factors
+#### The application helps user to get how many years left to live based on a planet and user's lifestyle with other factors
 
 
 
@@ -26,7 +26,38 @@
 
 ## Known bugs
  non
+## Tests
+  When entering Earthly years to get planets years
+  **:(**
 
+```js
+ test('inputs for each planet', () => {
+    expect(Planets.earth).toEqual();
+    expect(Planets.mercury).toEqual(0.24);
+    extent(Planets.venus).toEqual(0.62);
+    extent(Planets.mars).toEqual(1.88);
+    extent(Planets.jupiter).toEqual(11.86);
+  });
+
+  test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
+    expect(planets.getDivineMercury()).toEqual(100);
+
+  });
+  test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
+    expect(planets.getDivineVenus()).toEqual(0.387);
+
+  });
+  test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
+    expect(planets.getDivineMars()).toEqual(12.76);
+
+  });
+  test('should divine earth years on Jupiter year to get how many Jupiter years in earth years', () => {
+    expect(planets.getDivineJupiter()).toEqual(2.023);
+
+  });
+```
+
+**:)**
 ## License
 
 MIT
