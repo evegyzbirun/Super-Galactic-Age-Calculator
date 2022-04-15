@@ -19,15 +19,31 @@ describe('Planets', () => {
   let planets;
 
   beforeEach(() => {
-    planets = new Planets(24, 0.24);
+    planets = new Planets(24, 0.24, 0.62, 1.88, 11.86);
   });
 
   test('earth year and mercury one eacth year', () => {
     expect(Planets.earth).toEqual(24);
     expect(Planets.mercury).toEqual(0.24);
+    extent(Planets.venus).toEqual(0.62);
+    extent(Planets.mars).toEqual(1.88);
+    extent(Planets.jupiter).toEqual(11.86);
   });
 
   test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
-    expect(planets.getdivine()).toEqual(100);
+    expect(planets.getDivineMercury()).toEqual(100);
+
+  });
+  test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
+    expect(planets.getDivineVenus()).toEqual(100);
+
+  });
+  test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
+    expect(planets.getDivineMars()).toEqual(100);
+
+  });
+  test('should divine earth years on Jupiter year to get how many Jupiter years in earth years', () => {
+    expect(planets.getDivineJupiter()).toEqual(100);
+
   });
 });
