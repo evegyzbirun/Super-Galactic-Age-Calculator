@@ -1,4 +1,5 @@
 // solar year 365 on Earth 
+
 //
 //A Mercury year is .24 Earth years. mercury years age = Earth year/ Mecrucy year
 //A Venus year is .62 Earth years.  venus years age = Earth year/ venus year

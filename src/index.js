@@ -11,3 +11,8 @@ export default function Years(earth, mercury, venus, mars, jupiter) {
   this.jupiter = jupiter;
 
 }
+
+
+MercuryYears() {
+  let age.mercury = earth % mercury;
+}
