@@ -12,14 +12,22 @@
 
 
 //import Years from '../src/index.js';
-import { Planets } from '../src/js/planets-years-convert.js';
+import Planets from '../src/js/planets-years-convert.js';
+
 describe('Planets', () => {
 
-  let Planets = new Planets();
-  let devineOfTwo = Planets.Constructor(devine(24, 0.24))
+  let planets;
 
+  beforeEach(() => {
+    planets = new Planets(24, 0.24);
+  });
 
-  test('Should return age in Mercury years', () => {
-    expect(devineOfTwo).toEqual(100);
+  test('should correctly create a rectangle object using two sides', () => {
+    expect(Planets.earth).toEqual(24);
+    expect(Planets.mercury).toEqual(0.24);
+  });
+
+  test('should correctly get the area of a rectangle object', () => {
+    expect(planets.getdivine()).toEqual(100);
   });
 });
