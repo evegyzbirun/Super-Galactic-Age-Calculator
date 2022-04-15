@@ -6,7 +6,7 @@
 
 
 
-#### the project link to github: 
+#### the project link to github: https://github.com/evegyzbirun/Super-Galactic-Age-Calculator
 
 ## Technologies Used:
 * VS code
@@ -27,12 +27,16 @@
 ## Known bugs
  non
 ## Tests
-  When entering Earthly years to get planets years
+  When entering Earthly years to get planets years.
+  input: earthly years(24)
+  output:Mercury years(100); Venus years(38.70); Mars years(12.76); Jupiter years(2.023);
+  
+  
   **:(**
 
 ```js
  test('inputs for each planet', () => {
-    expect(Planets.earth).toEqual();
+    expect(Planets.earth).toEqual(24);
     expect(Planets.mercury).toEqual(0.24);
     extent(Planets.venus).toEqual(0.62);
     extent(Planets.mars).toEqual(1.88);
@@ -44,7 +48,7 @@
 
   });
   test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
-    expect(planets.getDivineVenus()).toEqual(0.387);
+    expect(planets.getDivineVenus()).toEqual(38.70);
 
   });
   test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
