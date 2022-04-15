@@ -1,12 +1,12 @@
 export default class Planets {
 
-  Constructor(earth, mercury) {
+  constructor(earth, mercury) {
     this.earth = earth;
     this.mercury = mercury;
 
   }
   getdivine() {
-    return this.earth / this.mercury;
+    return this.earth % this.mercury;
   }
 
 }

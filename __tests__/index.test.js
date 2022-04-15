@@ -22,12 +22,12 @@ describe('Planets', () => {
     planets = new Planets(24, 0.24);
   });
 
-  test('should correctly create a rectangle object using two sides', () => {
+  test('earth year and mercury one eacth year', () => {
     expect(Planets.earth).toEqual(24);
     expect(Planets.mercury).toEqual(0.24);
   });
 
-  test('should correctly get the area of a rectangle object', () => {
+  test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
     expect(planets.getdivine()).toEqual(100);
   });
 });
