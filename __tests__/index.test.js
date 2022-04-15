@@ -6,17 +6,20 @@
 //A Mars year is 1.88 Earth years.  Mars years age = Earth year/ Mars year
 //A Jupiter year is 11.86 Earth years.  Jupiter years age = Earth year/ Jupiter year
 
-import Years from '../src/js/index.js';
 
-escribe(' Years', () => {
+//  the user's life expectancy depends on: lifestyle, country of residence, activity level
+// So we input age and pick your description about how we liv. it will show us how long we would able to live in Earth, Mercury, Venus, Mars, Jupiter years. 
 
-  let age;
 
-  beforeEach(() => {
-    age = new Years(0, 0, 0, 0, 0);
-  });
+//import Years from '../src/index.js';
+import { Planets } from '../src/js/planets-years-convert.js';
+describe('Planets', () => {
+
+  let Planets = new Planets();
+  let devineOfTwo = Planets.Constructor(devine(24, 0.24))
+
 
   test('Should return age in Mercury years', () => {
-    expect(age.earth).toEqual(age.mercury);
+    expect(devineOfTwo).toEqual(100);
   });
 });
