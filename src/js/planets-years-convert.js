@@ -1,11 +1,11 @@
-export default class Planets {
+export class Planets {
 
-  constructor(earth, mercury, venus, mars, jupiter) {
+  constructor(earth, convertedYears) {
     this.earth = earth;
-    this.mercury = mercury;
-    this.venus = venus;
-    this.mars = mars;
-    this.jupiter = jupiter;
+    this.mercury = 0.24;
+    this.venus = 0.62;
+    this.mars = 1.88;
+    this.jupiter = 11.86;
 
   }
   getDivineMercury() {
@@ -29,6 +29,19 @@ export default class Planets {
 
   }
 
+}
 
+export class UserInput {
+  constructor(name, activity, food) {
+    this.name = name;
+    this.activity = activity;
+    this.food = food;
+  }
 
+  lifeExpectancy() {
+    const health = (this.activity + this.food)
+    return health;
+  }
+
+}
 }
