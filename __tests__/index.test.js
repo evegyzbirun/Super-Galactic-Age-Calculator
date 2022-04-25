@@ -1,35 +1,12 @@
-// solar year 365 on Earth 
-
-//
-//A Mercury year is .24 Earth years. mercury years age = Earth year/ Mecrucy year
-//A Venus year is .62 Earth years.  venus years age = Earth year/ venus year
-//A Mars year is 1.88 Earth years.  Mars years age = Earth year/ Mars year
-//A Jupiter year is 11.86 Earth years.  Jupiter years age = Earth year/ Jupiter year
-
-
-//  the user's life expectancy depends on: lifestyle, country of residence, activity level
-// So we input age and pick your description about how we liv. it will show us how long we would able to live in Earth, Mercury, Venus, Mars, Jupiter years. 
-
-
-//import Years from '../src/index.js';
-import Planets from '../src/js/planets-years-convert.js';
+import { Planets, UserInput } from '../src/js/planets-years-convert.js';
 
 describe('Planets', () => {
 
   let planets;
 
   beforeEach(() => {
-    planets = new Planets(24, 0.24, 0.62, 1.88, 11.86);
+    planets = new Planets(24);
   });
-
- test('inputs for each planet', () => {
-    expect(Planets.earth).toEqual(24);
-    expect(Planets.mercury).toEqual(0.24);
-    extent(Planets.venus).toEqual(0.62);
-    extent(Planets.mars).toEqual(1.88);
-    extent(Planets.jupiter).toEqual(11.86);
-  });
-
   test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
     expect(planets.getDivineMercury()).toEqual(100);
 
@@ -47,3 +24,58 @@ describe('Planets', () => {
 
   });
 });
+
+//UserInput
+describe('UserInput', () => {
+  test('It should create a user with name and age input', () => {
+    const user = new UserInput("John");
+
+    expect(user.name).toEqual("John");
+
+  });
+  test('It should create users with names and ages inputs', () => {
+    const user1 = new UserInput("Alex");
+    const user2 = new UserInput("Ana");
+
+    expect(user1.name).toEqual("Alex");
+    expect(user2.name).toEqual("Ana");
+  });
+
+});
+
+describe('UserInput.lifeExpectancy', () => {
+  test('It would take two life expectancy and calculate how long the user will live', () => {
+    const user1 = new UserInput("Alex");
+    // we use age input this.earth
+    user1.activity = 25;
+    user1.food = 20;
+    const finalAge = user1.lifeExpectancy();
+    expect(finalAge).toEqual(45);
+  });
+});
+
+
+describe('Planets.getDivineMercury', () => {
+  test('It would take years and convert to Mercury years with two live expectancy and calculate how long the user will live ', () => {
+    const user1 = new UserInput("Alex");
+    const user1Years = new Planets(30);
+    // we use age input this.earth
+    //our life expectancy are no earth years, so I have to convert them as well
+    user1.activity = 25 / 0.24;
+    user1.food = 20 / 0.24;
+
+    const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
+
+    expect(finalAge).toEqual(312.5);
+  });
+  test('How many years left to live', () => {
+    const user1 = new UserInput("Alex");
+    const user1Years = new Planets(30);
+    user1.activity = 25 / 0.24;
+    user1.food = 20 / 0.24;
+    const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
+    const yearsLeft = finalAge - user1Years.getDivineMercury();
+    expect(yearsLeft).toEqual(187.5);
+  });
+});
+
