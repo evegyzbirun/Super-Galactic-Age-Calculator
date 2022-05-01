@@ -1,6 +1,6 @@
 export class Planets {
 
-  constructor(earth, convertedYears) {
+  constructor(earth) {
     this.earth = earth;
     this.mercury = 0.24;
     this.venus = 0.62;
@@ -27,6 +27,16 @@ export class Planets {
   getDivineJupiter() {
     return this.earth / this.jupiter;
 
+  }
+
+  veryOld() {
+    if (this.earth >= 50) {
+      return this.earth = "too old"
+    } else if (this.earth < 50 && 40 < this.earth) {
+      return this.earth = "middle age"
+    } else {
+      return this.earth = "young"
+    }
   }
 
 }

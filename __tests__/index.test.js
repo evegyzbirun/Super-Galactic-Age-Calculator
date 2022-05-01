@@ -25,6 +25,17 @@ describe('Planets', () => {
   });
 });
 
+describe('Planets,veryOld', () => {
+  test('It should return "too old" if age equals 50 or more', () => {
+    const age = new Planets(55)
+    expect(age.veryOld()).toEqual("too old")
+  });
+  test('It should return "young" if age equals 40 or less', () => {
+    const age1 = new Planets(25)
+    expect(age1.veryOld()).toEqual("young")
+  });
+});
+
 //UserInput
 describe('UserInput', () => {
   test('It should create a user with name and age input', () => {
