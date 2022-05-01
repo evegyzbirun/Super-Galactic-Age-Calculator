@@ -26,13 +26,17 @@ describe('Planets', () => {
 });
 
 describe('Planets,veryOld', () => {
-  test('It should return "too old" if age equals 50 or more', () => {
-    const age = new Planets(55)
-    expect(age.veryOld()).toEqual("too old")
+  test('It should return "too old" if age equals 50(earth years without lifeExpectancy) or more', () => {
+    const age = new Planets(55);
+    expect(age.veryOld()).toEqual("too old");
   });
-  test('It should return "young" if age equals 40 or less', () => {
-    const age1 = new Planets(25)
-    expect(age1.veryOld()).toEqual("young")
+  test('It should return "middle age" if age between 40 and 50 (earth years without lifeExpectancy)', () => {
+    const age = new Planets(42);
+    expect(age.veryOld()).toEqual("middle age");
+  });
+  test('It should return "young" if age equals 40 (earth years without lifeExpectancy) or less', () => {
+    const age1 = new Planets(25);
+    expect(age1.veryOld()).toEqual("young");
   });
 });
 
@@ -55,7 +59,7 @@ describe('UserInput', () => {
 });
 
 describe('UserInput.lifeExpectancy', () => {
-  test('It would take two life expectancy and calculate how long the user will live', () => {
+  test('It would take two life expectancy and calculate how many years it adds to the user', () => {
     const user1 = new UserInput("Alex");
     // we use age input this.earth
     user1.activity = 25;
