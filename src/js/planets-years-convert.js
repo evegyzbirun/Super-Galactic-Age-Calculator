@@ -9,23 +9,23 @@ export class Planets {
 
   }
   getDivineMercury() {
-    return this.earth / this.mercury;
+    return this.earth * this.mercury;
 
   }
 
   getDivineVenus() {
-    return this.earth / this.venus;
+    return this.earth * this.venus;
 
   }
 
   getDivineMars() {
 
-    return this.earth / this.mars;
+    return this.earth * this.mars;
 
   }
 
   getDivineJupiter() {
-    return this.earth / this.jupiter;
+    return this.earth * this.jupiter;
 
   }
 

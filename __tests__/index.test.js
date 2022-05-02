@@ -121,7 +121,7 @@ describe('Planets.getDivineJupiter', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const JupiterFinaleAge = user1Years.getDivineJupiter(finalAge);
-    expect(JupiterFinaleAge).toEqual(5.319148936170213);
+    expect(JupiterFinaleAge).toEqual(2.782462057335582);
   });
 });
 
