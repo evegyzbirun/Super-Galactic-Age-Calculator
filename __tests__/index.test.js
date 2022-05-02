@@ -127,4 +127,13 @@ describe('Planets.getJupiter', () => {
   });
 });
 
+describe('UserInput.overLive', () => {
+  test('It should show how many years user overlives', () => {
+    const overlive = new UserInput("Alex", 70);
+    overlive.activity = 50;
+    overlive.food = 60;
+    const overAge = overlive.overlive();
+    expect(overAge).toEqual(00);
+  })
+});
 
