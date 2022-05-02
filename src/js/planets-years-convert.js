@@ -49,6 +49,7 @@ export class UserInput {
     this.food = food;
   }
 
+  //health is general age with health life style. So we take health - input age and get lifeExpectancy years left
   lifeExpectancy() {
     const health = (this.activity + this.food) / 2
     return health - this.age
