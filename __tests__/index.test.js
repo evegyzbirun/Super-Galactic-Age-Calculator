@@ -7,20 +7,20 @@ describe('Planets', () => {
   beforeEach(() => {
     planets = new Planets(24);
   });
-  test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
-    expect(planets.getDivineMercury()).toEqual(5.76);
+  test('should multiply earth years on mercury year to get how many mercury years in earth years', () => {
+    expect(planets.getMercury()).toEqual(5.76);
 
   });
-  test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
-    expect(planets.getDivineVenus()).toEqual(14.879999999999999);
+  test('should multiply earth years on Venus year to get how many Venus years in earth years', () => {
+    expect(planets.getVenus()).toEqual(14.879999999999999);
 
   });
-  test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
-    expect(planets.getDivineMars()).toEqual(45.12);
+  test('should multiply earth years on Mars year to get how many Mars years in earth years', () => {
+    expect(planets.getMars()).toEqual(45.12);
 
   });
-  test('should divine earth years on Jupiter year to get how many Jupiter years in earth years', () => {
-    expect(planets.getDivineJupiter()).toEqual(284.64);
+  test('should multiply earth years on Jupiter year to get how many Jupiter years in earth years', () => {
+    expect(planets.getJupiter()).toEqual(284.64);
 
   });
 });
@@ -73,7 +73,7 @@ describe('UserInput.lifeExpectancy', () => {
 });
 
 
-describe('Planets.getDivineMercury', () => {
+describe('Planets.getMercury', () => {
 
   test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(25);
@@ -81,12 +81,12 @@ describe('Planets.getDivineMercury', () => {
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
-    const MercuryFinalAge = user1Years.getDivineMercury(finalAge);
+    const MercuryFinalAge = user1Years.getMercury(finalAge);
     expect(MercuryFinalAge).toEqual(6);
   });
 });
 
-describe('Planets.getDivineVenus', () => {
+describe('Planets.getVenus', () => {
 
   test('It would take years and convert to Venus years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(19);
@@ -94,12 +94,12 @@ describe('Planets.getDivineVenus', () => {
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
-    const VenusFinalAge = user1Years.getDivineVenus(finalAge);
+    const VenusFinalAge = user1Years.getVenus(finalAge);
     expect(VenusFinalAge).toEqual(11.78);
   });
 });
 
-describe('Planets.getDivineMars', () => {
+describe('Planets.getMars', () => {
 
   test('It would take years and convert to Mars years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(10);
@@ -107,12 +107,12 @@ describe('Planets.getDivineMars', () => {
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
-    const MarsFinaleAge = user1Years.getDivineMars(finalAge);
+    const MarsFinaleAge = user1Years.getMars(finalAge);
     expect(MarsFinaleAge).toEqual(18.799999999999997);
   });
 });
 
-describe('Planets.getDivineJupiter', () => {
+describe('Planets.getJupiter', () => {
 
   test('It would take years and convert to Jupiter years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(33);
@@ -120,7 +120,7 @@ describe('Planets.getDivineJupiter', () => {
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
-    const JupiterFinaleAge = user1Years.getDivineJupiter(finalAge);
+    const JupiterFinaleAge = user1Years.getJupiter(finalAge);
     expect(JupiterFinaleAge).toEqual(391.38);
   });
 });

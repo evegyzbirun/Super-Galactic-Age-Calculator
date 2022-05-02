@@ -8,23 +8,23 @@ export class Planets {
     this.jupiter = 11.86;
 
   }
-  getDivineMercury() {
+  getMercury() {
     return this.earth * this.mercury;
 
   }
 
-  getDivineVenus() {
+  getVenus() {
     return this.earth * this.venus;
 
   }
 
-  getDivineMars() {
+  getMars() {
 
     return this.earth * this.mars;
 
   }
 
-  getDivineJupiter() {
+  getJupiter() {
     return this.earth * this.jupiter;
 
   }
@@ -50,6 +50,7 @@ export class UserInput {
   }
 
   //health is general age with health life style. So we take health - input age and get lifeExpectancy years left
+
   lifeExpectancy() {
     const health = (this.activity + this.food) / 2
     return health - this.age
