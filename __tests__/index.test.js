@@ -94,7 +94,7 @@ describe('Planets.getDivineVenus', () => {
 
   test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(19);
-    const user1 = new UserInput("Alex", 36);
+    const user1 = new UserInput("Anna", 36);
 
 
     // we use age input this.earth
@@ -104,6 +104,23 @@ describe('Planets.getDivineVenus', () => {
     const finalAge = user1.lifeExpectancy();
     const VenusFinalAge = user1Years.getDivineVenus(finalAge);
     expect(VenusFinalAge).toEqual(30.64516129032258);
+  });
+});
+
+describe('Planets.getDivineMars', () => {
+
+  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
+    const user1Years = new Planets(10);
+    const user1 = new UserInput("Vanessa", 45);
+
+
+    // we use age input this.earth
+    //our life expectancy are no earth years, so I have to convert them as well
+    user1.activity = 50;
+    user1.food = 60;
+    const finalAge = user1.lifeExpectancy();
+    const MarsFinaleAge = user1Years.getDivineMars(finalAge);
+    expect(MarsFinaleAge).toEqual(5.319148936170213);
   });
 
 });
