@@ -7,19 +7,19 @@ describe('Planets', () => {
   beforeEach(() => {
     planets = new Planets(24);
   });
-  test('should multiply earth years on mercury year to get how many mercury years in earth years', () => {
+  test('It should multiply earth years on mercury year to get how many mercury years the user gets', () => {
     expect(planets.getMercury()).toEqual(5.76);
 
   });
-  test('should multiply earth years on Venus year to get how many Venus years in earth years', () => {
+  test('It should multiply earth years on Venus year to get how many Venus years the user gets', () => {
     expect(planets.getVenus()).toEqual(14.879999999999999);
 
   });
-  test('should multiply earth years on Mars year to get how many Mars years in earth years', () => {
+  test('It should multiply earth years on Mars year to get how many Mars years the user gets', () => {
     expect(planets.getMars()).toEqual(45.12);
 
   });
-  test('should multiply earth years on Jupiter year to get how many Jupiter years in earth years', () => {
+  test('It should multiply earth years on Jupiter year to get how many Jupiter years the user gets', () => {
     expect(planets.getJupiter()).toEqual(284.64);
 
   });
@@ -69,6 +69,8 @@ describe('UserInput.lifeExpectancy', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     expect(finalAge).toEqual(25);
+    expect(user1.activity).toEqual(50);
+    expect(user1.food).toEqual(60);
   });
 });
 

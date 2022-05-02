@@ -33,26 +33,30 @@
 ```js
  
 
-  test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
-    expect(planets.getDivineMercury()).toEqual(100);
+  test('It should multiply earth years on mercury year to get how many mercury years the user gets', () => {
+    expect(planets.getMercury()).toEqual(5.76);
 
   });
-  test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
-    expect(planets.getDivineVenus()).toEqual(0.387);
+  test('It should multiply earth years on Venus year to get how many Venus years the user gets', () => {
+    expect(planets.getVenus()).toEqual(14.879999999999999);
 
   });
-  test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
-    expect(planets.getDivineMars()).toEqual(12.76);
+  test('It should multiply earth years on Mars year to get how many Mars years the user gets', () => {
+    expect(planets.getMars()).toEqual(45.12);
 
   });
-  test('should divine earth years on Jupiter year to get how many Jupiter years in earth years', () => {
-    expect(planets.getDivineJupiter()).toEqual(2.023);
+  test('It should multiply earth years on Jupiter year to get how many Jupiter years the user gets', () => {
+    expect(planets.getJupiter()).toEqual(284.64);
 
+  
   });
-  test('It should create a user with name and age input', () => {
-    const user = new UserInput("John");
+  test('It should create a user with name and age', () => {
+    const user = new UserInput("John", 30);
 
     expect(user.name).toEqual("John");
+    expect(user.age).toEqual(30);
+
+  });
 
 ```
 
