@@ -8,7 +8,7 @@ describe('Planets', () => {
     planets = new Planets(24);
   });
   test('should divine earth years on mercury year to get how many mercury years in earth years', () => {
-    expect(planets.getDivineMercury()).toEqual(100);
+    expect(planets.getDivineMercury()).toEqual(5.76);
 
   });
   test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
