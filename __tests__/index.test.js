@@ -74,30 +74,36 @@ describe('UserInput.lifeExpectancy', () => {
 
 
 describe('Planets.getDivineMercury', () => {
-  let user1;
-  let user1Years;
-  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live ', () => {
-    user1 = new UserInput("Alex", 30);
-    user1Years = new Planets();
-    user1Years.earth = user1[1];
+
+  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
+    const user1Years = new Planets(25);
+    const user1 = new UserInput("Alex", 30);
+
+
     // we use age input this.earth
     //our life expectancy are no earth years, so I have to convert them as well
     user1.activity = 50;
     user1.food = 60;
-
-    const finalAge = user1Years.getDivineMercury(user1.lifeExpectancy());
-
-
-    expect(finalAge).toEqual(25);
+    const finalAge = user1.lifeExpectancy();
+    const MercuryFinalAge = user1Years.getDivineMercury(finalAge);
+    expect(MercuryFinalAge).toEqual(104.16666666666667);
   });
-  test('How many years left to live', () => {
-    const user1 = new UserInput("Alex", 30);
-    const user1Years = new Planets(30);
-    user1.activity = 50 / 0.24;
-    user1.food = 60 / 0.24;
-    const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
-    const yearsLeft = finalAge - user1Years.getDivineMercury();
-    expect(yearsLeft).toEqual(187.5);
+});
+
+describe('Planets.getDivineVenus', () => {
+
+  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
+    const user1Years = new Planets(19);
+    const user1 = new UserInput("Alex", 36);
+
+
+    // we use age input this.earth
+    //our life expectancy are no earth years, so I have to convert them as well
+    user1.activity = 50;
+    user1.food = 60;
+    const finalAge = user1.lifeExpectancy();
+    const VenusFinalAge = user1Years.getDivineVenus(finalAge);
+    expect(VenusFinalAge).toEqual(30.64516129032258);
   });
 });
 
