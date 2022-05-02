@@ -68,7 +68,7 @@ describe('UserInput.lifeExpectancy', () => {
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
-    expect(finalAge).toEqual(45);
+    expect(finalAge).toEqual(25);
   });
 });
 
