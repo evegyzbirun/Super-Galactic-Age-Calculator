@@ -133,7 +133,7 @@ describe('UserInput.overLive', () => {
     overlive.activity = 50;
     overlive.food = 60;
     const overAge = overlive.overlive();
-    expect(overAge).toEqual(00);
+    expect(overAge).toEqual(55);
   })
 });
 
