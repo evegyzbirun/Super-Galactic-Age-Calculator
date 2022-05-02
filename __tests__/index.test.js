@@ -12,15 +12,15 @@ describe('Planets', () => {
 
   });
   test('should divine earth years on Venus year to get how many Venus years in earth years', () => {
-    expect(planets.getDivineVenus()).toEqual(38.70967741935484);
+    expect(planets.getDivineVenus()).toEqual(14.879999999999999);
 
   });
   test('should divine earth years on Mars year to get how many Mars years in earth years', () => {
-    expect(planets.getDivineMars()).toEqual(12.765957446808512);
+    expect(planets.getDivineMars()).toEqual(45.12);
 
   });
   test('should divine earth years on Jupiter year to get how many Jupiter years in earth years', () => {
-    expect(planets.getDivineJupiter()).toEqual(2.0236087689713322);
+    expect(planets.getDivineJupiter()).toEqual(284.64);
 
   });
 });
@@ -82,7 +82,7 @@ describe('Planets.getDivineMercury', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const MercuryFinalAge = user1Years.getDivineMercury(finalAge);
-    expect(MercuryFinalAge).toEqual(104.16666666666667);
+    expect(MercuryFinalAge).toEqual(6);
   });
 });
 
@@ -95,7 +95,7 @@ describe('Planets.getDivineVenus', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const VenusFinalAge = user1Years.getDivineVenus(finalAge);
-    expect(VenusFinalAge).toEqual(30.64516129032258);
+    expect(VenusFinalAge).toEqual(11.78);
   });
 });
 
@@ -108,7 +108,7 @@ describe('Planets.getDivineMars', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const MarsFinaleAge = user1Years.getDivineMars(finalAge);
-    expect(MarsFinaleAge).toEqual(5.319148936170213);
+    expect(MarsFinaleAge).toEqual(18.799999999999997);
   });
 });
 
@@ -121,7 +121,7 @@ describe('Planets.getDivineJupiter', () => {
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const JupiterFinaleAge = user1Years.getDivineJupiter(finalAge);
-    expect(JupiterFinaleAge).toEqual(2.782462057335582);
+    expect(JupiterFinaleAge).toEqual(391.38);
   });
 });
 
