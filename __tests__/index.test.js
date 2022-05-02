@@ -135,5 +135,15 @@ describe('UserInput.overLive', () => {
     const overAge = overlive.overlive();
     expect(overAge).toEqual(55);
   })
+  test('It should show how namy years user overlive on Mercury', () => {
+    const userYear = new Planets()
+    const overlive = new UserInput("Alex", 70);
+    overlive.activity = 50;
+    overlive.food = 60;
+    const overAge = overlive.overlive();
+    const overAgeMercury = userYear.getMercury(overAge);
+    expect(overAgeMercury).toEqual(0);
+
+  })
 });
 
