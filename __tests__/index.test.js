@@ -42,18 +42,21 @@ describe('Planets,veryOld', () => {
 
 //UserInput
 describe('UserInput', () => {
-  test('It should create a user with name', () => {
-    const user = new UserInput("John");
+  test('It should create a user with name and age', () => {
+    const user = new UserInput("John", 30);
 
     expect(user.name).toEqual("John");
+    expect(user.age).toEqual(30);
 
   });
-  test('It should create users with names', () => {
-    const user1 = new UserInput("Alex");
-    const user2 = new UserInput("Ana");
+  test('It should create users with names and ages', () => {
+    const user1 = new UserInput("Alex", 35);
+    const user2 = new UserInput("Ana", 40);
 
     expect(user1.name).toEqual("Alex");
+    expect(user1.age).toEqual(35);
     expect(user2.name).toEqual("Ana");
+    expect(user2.age).toEqual(40);
   });
 
 });
@@ -81,7 +84,7 @@ describe('Planets.getDivineMercury', () => {
 
     const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
 
-    expect(finalAge).toEqual(312.5);
+    expect(finalAge).toEqual(188.75);
   });
   test('How many years left to live', () => {
     const user1 = new UserInput("Alex", 30);
