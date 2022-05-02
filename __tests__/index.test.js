@@ -105,5 +105,6 @@ describe('Planets.getDivineVenus', () => {
     const VenusFinalAge = user1Years.getDivineVenus(finalAge);
     expect(VenusFinalAge).toEqual(30.64516129032258);
   });
+
 });
 
