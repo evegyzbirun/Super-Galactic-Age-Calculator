@@ -42,13 +42,13 @@ describe('Planets,veryOld', () => {
 
 //UserInput
 describe('UserInput', () => {
-  test('It should create a user with name and age input', () => {
+  test('It should create a user with name', () => {
     const user = new UserInput("John");
 
     expect(user.name).toEqual("John");
 
   });
-  test('It should create users with names and ages inputs', () => {
+  test('It should create users with names', () => {
     const user1 = new UserInput("Alex");
     const user2 = new UserInput("Ana");
 
@@ -72,7 +72,7 @@ describe('UserInput.lifeExpectancy', () => {
 
 describe('Planets.getDivineMercury', () => {
   test('It would take years and convert to Mercury years with two live expectancy and calculate how long the user will live ', () => {
-    const user1 = new UserInput("Alex");
+    const user1 = new UserInput("Alex", 30);
     const user1Years = new Planets(30);
     // we use age input this.earth
     //our life expectancy are no earth years, so I have to convert them as well
@@ -84,7 +84,7 @@ describe('Planets.getDivineMercury', () => {
     expect(finalAge).toEqual(312.5);
   });
   test('How many years left to live', () => {
-    const user1 = new UserInput("Alex");
+    const user1 = new UserInput("Alex", 30);
     const user1Years = new Planets(30);
     user1.activity = 50 / 0.24;
     user1.food = 60 / 0.24;

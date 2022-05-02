@@ -42,9 +42,9 @@ export class Planets {
 }
 
 export class UserInput {
-  constructor(age, name, activity, food) {
-    this.age = age;
+  constructor(name, age, activity, food) {
     this.name = name;
+    this.age = age;
     this.activity = activity;
     this.food = food;
   }
