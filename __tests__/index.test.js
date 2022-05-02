@@ -78,10 +78,6 @@ describe('Planets.getDivineMercury', () => {
   test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(25);
     const user1 = new UserInput("Alex", 30);
-
-
-    // we use age input this.earth
-    //our life expectancy are no earth years, so I have to convert them as well
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
@@ -92,13 +88,9 @@ describe('Planets.getDivineMercury', () => {
 
 describe('Planets.getDivineVenus', () => {
 
-  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
+  test('It would take years and convert to Venus years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(19);
     const user1 = new UserInput("Anna", 36);
-
-
-    // we use age input this.earth
-    //our life expectancy are no earth years, so I have to convert them as well
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
@@ -109,19 +101,28 @@ describe('Planets.getDivineVenus', () => {
 
 describe('Planets.getDivineMars', () => {
 
-  test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live on the planet ', () => {
+  test('It would take years and convert to Mars years with expectancy and calculate how long the user will live on the planet ', () => {
     const user1Years = new Planets(10);
     const user1 = new UserInput("Vanessa", 45);
-
-
-    // we use age input this.earth
-    //our life expectancy are no earth years, so I have to convert them as well
     user1.activity = 50;
     user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     const MarsFinaleAge = user1Years.getDivineMars(finalAge);
     expect(MarsFinaleAge).toEqual(5.319148936170213);
   });
-
 });
+
+describe('Planets.getDivineJupiter', () => {
+
+  test('It would take years and convert to Jupiter years with expectancy and calculate how long the user will live on the planet ', () => {
+    const user1Years = new Planets(33);
+    const user1 = new UserInput("Marcus", 22);
+    user1.activity = 50;
+    user1.food = 60;
+    const finalAge = user1.lifeExpectancy();
+    const JupiterFinaleAge = user1Years.getDivineJupiter(finalAge);
+    expect(JupiterFinaleAge).toEqual(5.319148936170213);
+  });
+});
+
 
