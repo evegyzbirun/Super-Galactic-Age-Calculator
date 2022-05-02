@@ -62,7 +62,7 @@ describe('UserInput', () => {
 });
 
 describe('UserInput.lifeExpectancy', () => {
-  test('It would take two life expectancy and calculate how many years it adds to the user', () => {
+  test('It would take two life expectancy and calculate how many years left to live', () => {
     const user1 = new UserInput("Alex", 30);
     // we use age input this.earth
     user1.activity = 50;
