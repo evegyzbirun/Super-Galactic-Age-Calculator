@@ -63,10 +63,10 @@ describe('UserInput', () => {
 
 describe('UserInput.lifeExpectancy', () => {
   test('It would take two life expectancy and calculate how many years it adds to the user', () => {
-    const user1 = new UserInput("Alex");
+    const user1 = new UserInput("Alex", 30);
     // we use age input this.earth
-    user1.activity = 25;
-    user1.food = 20;
+    user1.activity = 50;
+    user1.food = 60;
     const finalAge = user1.lifeExpectancy();
     expect(finalAge).toEqual(45);
   });
