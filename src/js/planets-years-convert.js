@@ -42,16 +42,19 @@ export class Planets {
 }
 
 export class UserInput {
-  constructor(name, activity, food) {
+  constructor(age, name, activity, food) {
+    this.age = age;
     this.name = name;
     this.activity = activity;
     this.food = food;
   }
 
   lifeExpectancy() {
-    const health = (this.activity + this.food)
-    return health;
+    const health = (this.activity + this.food) / 2
+    return health - this.age
   }
 
 }
+
+
 

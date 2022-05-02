@@ -86,8 +86,8 @@ describe('Planets.getDivineMercury', () => {
   test('How many years left to live', () => {
     const user1 = new UserInput("Alex");
     const user1Years = new Planets(30);
-    user1.activity = 25 / 0.24;
-    user1.food = 20 / 0.24;
+    user1.activity = 50 / 0.24;
+    user1.food = 60 / 0.24;
     const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
     const yearsLeft = finalAge - user1Years.getDivineMercury();
     expect(yearsLeft).toEqual(187.5);
