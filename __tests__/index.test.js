@@ -74,18 +74,21 @@ describe('UserInput.lifeExpectancy', () => {
 
 
 describe('Planets.getDivineMercury', () => {
+  let user1;
+  let user1Years;
   test('It would take years and convert to Mercury years with expectancy and calculate how long the user will live ', () => {
-    const user1 = new UserInput("Alex", 30);
-    const user1Years = new Planets(30);
-
+    user1 = new UserInput("Alex", 30);
+    user1Years = new Planets();
+    user1Years.earth = user1[1];
     // we use age input this.earth
     //our life expectancy are no earth years, so I have to convert them as well
     user1.activity = 50;
     user1.food = 60;
 
-    const finalAge = user1.lifeExpectancy() + user1Years.getDivineMercury();
+    const finalAge = user1Years.getDivineMercury(user1.lifeExpectancy());
 
-    expect(finalAge).toEqual(188.75);
+
+    expect(finalAge).toEqual(25);
   });
   test('How many years left to live', () => {
     const user1 = new UserInput("Alex", 30);
